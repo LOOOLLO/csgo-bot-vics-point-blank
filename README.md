@@ -109,6 +109,9 @@ be reloaded in-game with `/csgo config reload`. Some of the values worth knowing
 | `roundsToWin` | `13` | Rounds needed to win the match |
 | `halfTimeRound` | `12` | Round after which the sides swap (`0` disables) |
 | `freezeTimeSeconds` | `10` | Freeze time at round start |
+| `forceSurvivalOnStart` | `true` | Put players into Survival when they join or a round starts |
+| `roundStartSaturation` | `true` | Give Saturation at round start, so hunger is never a factor |
+| `roundStartSaturationSeconds` | `5` | How long that Saturation lasts (raise it to cover a whole round) |
 | `bombTimerSeconds` | `40` | C4 detonation timer |
 | `playerDefuseTicks` | `200` | Defuse time without a kit (`100` with one) |
 | `plantCancelsOnDamage` | `true` | Getting shot cancels a plant/defuse |

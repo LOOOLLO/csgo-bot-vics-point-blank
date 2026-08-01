@@ -349,11 +349,27 @@ public class CsgoMatchState {
         SpectatorManager.attachToBestTeammate(player);
     }
 
-    private static void respawnForWarmup(ServerPlayer player, String team) {
-        if (player.gameMode.getGameModeForPlayer() == GameType.SPECTATOR) {
+    /**
+     * Riporta in sopravvivenza chi entra in partita. Prima si usciva solo dalla spettatore, quindi
+     * bastava lanciare il match da creativa per giocare invulnerabili e volare sopra le site.
+     */
+    private static void enterSurvival(ServerPlayer player) {
+        GameType mode = player.gameMode.getGameModeForPlayer();
+        if (mode == GameType.SURVIVAL) return;
+
+        if (mode == GameType.SPECTATOR) {
             SpectatorManager.detach(player);
             player.setGameMode(GameType.SURVIVAL);
+            return;
         }
+        // Creativa e avventura: si toccano solo se la config lo chiede.
+        if (CsgoConfig.get().forceSurvivalOnStart) {
+            player.setGameMode(GameType.SURVIVAL);
+        }
+    }
+
+    private static void respawnForWarmup(ServerPlayer player, String team) {
+        enterSurvival(player);
         equipTeam(player, team);
         teleportToSpawn(player, team);
         player.setHealth(player.getMaxHealth());
@@ -934,10 +950,7 @@ public class CsgoMatchState {
             return false;
         }
 
-        if (player.gameMode.getGameModeForPlayer() == GameType.SPECTATOR) {
-            SpectatorManager.detach(player);
-            player.setGameMode(GameType.SURVIVAL);
-        }
+        enterSurvival(player);
 
         setPlayerTeam(player.getUUID(), normalized);
         DEAD_THIS_ROUND.remove(player.getUUID());
@@ -952,21 +965,25 @@ public class CsgoMatchState {
 
     /** Reset di inizio round per un giocatore già assegnato ad una squadra. */
     private static void prepareForRound(ServerPlayer player, String team) {
-        if (player.gameMode.getGameModeForPlayer() == GameType.SPECTATOR) {
-            SpectatorManager.detach(player);
-            player.setGameMode(GameType.SURVIVAL);
-        }
+        enterSurvival(player);
         equipTeam(player, team);
         teleportToSpawn(player, team);
     }
 
     private static void equipTeam(ServerPlayer player, String team) {
-        if (CsgoConfig.get().clearInventoryOnJoin) {
+        CsgoConfig cfg = CsgoConfig.get();
+        if (cfg.clearInventoryOnJoin) {
             player.getInventory().clearContent();
         }
 
         player.setHealth(player.getMaxHealth());
         player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 40, 4, false, false));
+        // Saturation a inizio round: riempie fame e saturazione, così lo sprint è sempre
+        // disponibile e nessuno perde un round perché era a stomaco vuoto.
+        if (cfg.roundStartSaturation) {
+            player.addEffect(new MobEffectInstance(MobEffects.SATURATION,
+                    cfg.roundStartSaturationSeconds * 20, cfg.roundStartSaturationAmplifier, false, false));
+        }
 
         if (team.equals("T")) {
             player.setItemSlot(EquipmentSlot.HEAD, new ItemStack(ModItems.T_HELMET));

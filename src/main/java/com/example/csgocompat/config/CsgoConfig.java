@@ -35,6 +35,18 @@ public class CsgoConfig {
     /** Secondi di freeze time a inizio round (0 = disabilitato). */
     public int freezeTimeSeconds = 10;
 
+    /**
+     * Rimette in sopravvivenza chi entra in partita, anche se era in creativa o avventura.
+     * Senza questo si poteva far partire il match da creativa e giocare invulnerabili.
+     */
+    public boolean forceSurvivalOnStart = true;
+
+    /** Saturation a inizio round: la fame non deve mai essere un fattore in una partita CS. */
+    public boolean roundStartSaturation = true;
+    /** Alzalo fino a coprire l'intero round se vuoi che la fame non scenda mai. */
+    public int roundStartSaturationSeconds = 5;
+    public int roundStartSaturationAmplifier = 0;
+
     // --- Bomba ---
     public int bombTimerSeconds = 40;
     public int botPlantTicks = 64;
@@ -195,5 +207,7 @@ public class CsgoConfig {
         if (roundsToWin < 1) roundsToWin = def.roundsToWin;
         if (botsT < 0) botsT = 0;
         if (botsCT < 0) botsCT = 0;
+        if (roundStartSaturationSeconds < 1) roundStartSaturationSeconds = def.roundStartSaturationSeconds;
+        if (roundStartSaturationAmplifier < 0) roundStartSaturationAmplifier = 0;
     }
 }
