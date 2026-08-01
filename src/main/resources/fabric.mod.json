@@ -8,7 +8,9 @@
 		"LOOOLLO"
 	],
 	"contact": {
-		"homepage": "https://modrinth.com/mod/csgo-bot-vics-point-blank"
+		"homepage": "https://modrinth.com/mod/csgo-bot-vics-point-blank",
+		"sources": "https://github.com/LOOOLLO/csgo-bot-vics-point-blank",
+		"issues": "https://github.com/LOOOLLO/csgo-bot-vics-point-blank/issues"
 	},
 	"license": "ARR",
 	"icon": "assets/csgo_mc/icon.png",
