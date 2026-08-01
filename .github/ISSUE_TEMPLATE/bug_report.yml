@@ -1,0 +1,51 @@
+name: Bug report
+description: Something in the mod doesn't work the way it should
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this.
+
+        Before you start, please note: **this mod was programmed with AI, I am not a
+        full-time modder, and I normally make mods only for myself to play alone.** I
+        published this one because it was fun, but I fix things in my spare time and I
+        may be slow, or unable to help with complex modpack conflicts.
+
+        The more precise your report, the better my chances of actually fixing it.
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Minecraft, Fabric Loader, this mod, Point Blank and GeckoLib.
+      placeholder: "MC 1.21.11 · Loader 0.19.3 · csgo-mc-mod 1.0.0 · Point Blank 2.0.1 · GeckoLib 5.4.5"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Place a Bomb Site block ...
+        2. /csgo join T
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log
+      description: Paste the relevant part of `logs/latest.log`, or link a paste of the whole file.
+      render: shell
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods
+      description: Full mod list if you're in a modpack, otherwise "vanilla + dependencies only".

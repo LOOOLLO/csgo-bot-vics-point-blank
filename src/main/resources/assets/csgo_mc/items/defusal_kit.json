@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "model": {
+      "type": "geckolib:geckolib"
+    },
+    "base": "csgo_mc:item/defusal_kit"
+  }
+}

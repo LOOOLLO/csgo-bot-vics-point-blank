@@ -1,0 +1,23 @@
+{
+  "block.csgo_mc.bomb_site": "CS:GO Bomb Site Block",
+  "block.csgo_mc.c4_bomb": "CS:GO C4 Bomb",
+  "item.csgo_mc.ct_helmet": "CT Helmet",
+  "item.csgo_mc.ct_chestplate": "CT Chestplate",
+  "item.csgo_mc.ct_leggings": "CT Leggings",
+  "item.csgo_mc.ct_boots": "CT Boots",
+  "item.csgo_mc.t_helmet": "Terrorist Helmet",
+  "item.csgo_mc.t_chestplate": "Terrorist Chestplate",
+  "item.csgo_mc.t_leggings": "Terrorist Leggings",
+  "item.csgo_mc.t_boots": "Terrorist Boots",
+  "item.csgo_mc.defusal_kit": "Defusal Kit",
+  "item.csgo_mc.bomb_site_wand": "Bomb Site Wand",
+  "entity.csgo_mc.ct": "Counter-Terrorist",
+  "entity.csgo_mc.t": "Terrorist",
+  "itemGroup.csgo_mc.csgo_tab": "CS:GO Mod",
+  "subtitles.csgo_mc.c4_plant": "C4 armed",
+  "subtitles.csgo_mc.c4_beep": "C4 beeps",
+  "subtitles.csgo_mc.c4_explode": "C4 detonates",
+  "subtitles.csgo_mc.bomb_defused": "Bomb has been defused",
+  "subtitles.csgo_mc.defusing": "Defusing the bomb",
+  "subtitles.csgo_mc.round_start": "Go go go!"
+}

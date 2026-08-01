@@ -1,0 +1,44 @@
+{
+  "c4_plant": {
+    "category": "block",
+    "subtitle": "subtitles.csgo_mc.c4_plant",
+    "sounds": [
+      "csgo_mc:c4_plant"
+    ]
+  },
+  "c4_beep": {
+    "category": "block",
+    "subtitle": "subtitles.csgo_mc.c4_beep",
+    "sounds": [
+      "csgo_mc:c4_beep"
+    ]
+  },
+  "c4_explode": {
+    "category": "block",
+    "subtitle": "subtitles.csgo_mc.c4_explode",
+    "sounds": [
+      "csgo_mc:c4_explode"
+    ]
+  },
+  "bomb_defused": {
+    "category": "voice",
+    "subtitle": "subtitles.csgo_mc.bomb_defused",
+    "sounds": [
+      "csgo_mc:bomb_defused"
+    ]
+  },
+  "defusing": {
+    "category": "voice",
+    "subtitle": "subtitles.csgo_mc.defusing",
+    "sounds": [
+      "csgo_mc:defusing"
+    ]
+  },
+  "round_start": {
+    "category": "voice",
+    "subtitle": "subtitles.csgo_mc.round_start",
+    "sounds": [
+      "csgo_mc:round_start"
+    ]
+  }
+}

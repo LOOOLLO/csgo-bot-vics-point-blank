@@ -1,0 +1,63 @@
+# gradle
+
+.gradle/
+build/
+out/
+classes/
+
+# eclipse
+
+*.launch
+
+# idea
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+
+# macos
+
+.DS_Store
+*.DS_Store
+
+# fabric
+
+run/
+
+# java
+
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+
+# third-party mod jars — Point Blank etc. are not redistributable, see the README
+
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# local scratch: raw source audio and texture drafts, plus one-off patch scripts
+# that were already applied to the source tree
+
+suoni/
+texture per te*/
+Dump.java
+fix_*.py
+update_*.py
+modify_*.py
+remove_*.py
+log.txt
+
+# the Fabric template CI workflow cannot run here: the build needs the local
+# Point Blank jar, which is not redistributable. Kept locally, not published.
+
+.github/workflows/build.yml

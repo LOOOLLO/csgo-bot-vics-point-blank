@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "csgo_mc",
+	"version": "${version}",
+	"name": "CS:GO Minecraft Mod",
+	"description": "Adds CS:GO CT & T bots, team armor, plantable/defusable C4 bombs, round/match management and bomb sites.",
+	"authors": [
+		"LOOOLLO"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/csgo-bot-vics-point-blank"
+	},
+	"license": "ARR",
+	"icon": "assets/csgo_mc/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.example.csgocompat.CsGoCompatMod"
+		],
+		"client": [
+			"com.example.csgocompat.client.CsGoCompatModClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*",
+		"pointblank": "*",
+		"geckolib": "*"
+	}
+}

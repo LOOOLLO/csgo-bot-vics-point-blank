@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Download the mod
+    url: https://modrinth.com/mod/csgo-bot-vics-point-blank
+    about: Releases live on Modrinth.
+  - name: Before you open an issue
+    url: https://github.com/LOOOLLO/csgo-bot-vics-point-blank#️-please-read-this-first
+    about: This mod was written with AI by a hobbyist who makes mods to play alone. Please read this first.

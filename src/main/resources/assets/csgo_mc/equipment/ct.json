@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "csgo_mc:ct"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "csgo_mc:ct"
+      }
+    ]
+  }
+}

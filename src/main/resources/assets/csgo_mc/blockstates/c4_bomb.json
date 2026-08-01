@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "defused=false": { "model": "csgo_mc:block/c4_bomb" },
+    "defused=true": { "model": "csgo_mc:block/c4_bomb_defused" }
+  }
+}
