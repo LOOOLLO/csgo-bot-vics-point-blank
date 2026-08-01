@@ -7,7 +7,7 @@ and a synced HUD.
 **Minecraft 1.21.11 · Fabric · Java 21**
 
 📦 **Download:** [Modrinth](https://modrinth.com/mod/csgo-bot-vics-point-blank)
-📦 **Download:** [CurseForge]([https://modrinth.com/mod/csgo-bot-vics-point-blank](https://www.curseforge.com/minecraft/mc-mods/csgo-style-bot-vics-point-blank)
+📦 **Download:** [CurseForge](https://www.curseforge.com/minecraft/mc-mods/csgo-style-bot-vics-point-blank)
 
 ---
 
